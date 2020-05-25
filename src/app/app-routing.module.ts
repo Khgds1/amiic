@@ -5,6 +5,22 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'amiibo',
+    loadChildren: () => import('./amiibo/amiibo.module').then( m => m.AmiiboPageModule)
+  },
+  {
+    path: 'changelog',
+    loadChildren: () => import('./about/changelog/changelog.module').then( m => m.ChangelogPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   }
 ];
 @NgModule({
