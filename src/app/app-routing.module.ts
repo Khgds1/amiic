@@ -21,6 +21,14 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'changelog',
+    loadChildren: () => import('./about/changelog/changelog.module').then(m => m.ChangelogPageModule)
+  },
+  {
+    path: 'all-amiibo',
+    loadChildren: () => import('./amiibo/all-amiibo/all-amiibo.module').then(m => m.AllAmiiboPageModule)
   }
 ];
 @NgModule({

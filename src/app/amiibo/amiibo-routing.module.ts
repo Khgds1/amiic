@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: AmiiboPage
+  },
+  {
+    path: 'all-amiibo',
+    loadChildren: () => import('./all-amiibo/all-amiibo.module').then( m => m.AllAmiiboPageModule)
   }
 ];
 
